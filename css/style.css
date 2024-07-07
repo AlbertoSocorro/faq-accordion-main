@@ -1,0 +1,110 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: work-sans;
+  src: url(../assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+body {
+  font-family: work-sans;
+  background: url(../assets/images/background-pattern-mobile.svg) repeat-x hsl(292, 16%, 49%);
+}
+@media screen {
+  body {
+    background: url(../assets/images/background-pattern-desktop.svg) repeat-x hsl(292, 16%, 49%);
+  }
+}
+
+main {
+  background: hsl(0, 0%, 100%);
+  width: 320px;
+  padding: 40px;
+  margin: 50px auto;
+  border-radius: 15px;
+  font-size: 16px;
+}
+@media screen and (min-width: 640px) {
+  main {
+    width: 640px;
+  }
+}
+main .title {
+  display: inline-flex;
+  gap: 20px;
+}
+main .title h1 {
+  font-size: 3.2em;
+}
+main .question {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 20px 0;
+  display: flex;
+}
+main .question .plus {
+  display: block;
+  margin-left: auto;
+}
+main .question .minus {
+  display: none;
+  margin-left: auto;
+}
+main .answer {
+  display: none;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+main .linea {
+  width: 100%;
+  height: 1px;
+  background: hsl(275, 100%, 97%);
+}
+
+/*# sourceMappingURL=style.css.map */
